@@ -21,6 +21,16 @@ local plugins = {
   'farmergreg/vim-lastplace',
   { 'f-person/git-blame.nvim', opts = { enabled = false } },
   { 'nvim-treesitter/nvim-treesitter-context' },
+  {
+    'NeogitOrg/neogit',
+    dependencies = {
+      'nvim-lua/plenary.nvim', -- required
+      'sindrets/diffview.nvim', -- optional - Diff integration
+
+      'nvim-telescope/telescope.nvim', -- optional
+    },
+    config = true,
+  },
 }
 vim.keymap.set('n', 'gp', ':GitBlameToggle<CR>', { desc = '[gp] toggle git praise (blame)' })
 
