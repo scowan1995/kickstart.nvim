@@ -32,6 +32,5 @@ local plugins = {
     config = true,
   },
 }
-vim.keymap.set('n', 'gp', ':GitBlameToggle<CR>', { desc = '[gp] toggle git praise (blame)' })
 
 return plugins
